@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iba_course_2/lect1/list_view.dart';
+import 'package:iba_course_2/lect_2/list_api.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(),
         useMaterial3: false,
       ),
-      home: const ListPage(title: 'Class#1'),
+      home: const PostListUser(),
     );
   }
 }
