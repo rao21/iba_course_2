@@ -10,9 +10,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  flutter_bloc: ^8.1.6  # Latest stable version of flutter_bloc at the time
+  http: ^0.13.5 
   cupertino_icons: ^1.0.6
-
+  flutter_shimmer: ^2.1.1
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
