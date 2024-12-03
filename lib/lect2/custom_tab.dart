@@ -19,7 +19,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text('Lecture # 2 - Widget'),
           bottom: const TabBar(tabs: [
-                /*1*/  Tab(icon: Icon(Icons.directions_car)),
+                 Tab(icon: Icon(Icons.directions_car)),
                   Tab(icon: Icon(Icons.directions_transit)),
                   Tab(icon: Icon(Icons.directions_bike)),
           ],),
