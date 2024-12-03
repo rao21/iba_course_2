@@ -4,6 +4,10 @@ import 'package:flutter_shimmer/flutter_shimmer.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
+void main() {
+  runApp(MyApp());
+}
+
 // Product Model
 class Product {
   final int id;
@@ -35,7 +39,6 @@ class Product {
 abstract class ProductEvent {}
 
 class FetchProducts extends ProductEvent {}
-class FetchProducts2 extends ProductEvent {}
 // Bloc State
 abstract class ProductState {}
 class ProductInitial extends ProductState {}
@@ -78,9 +81,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
   }
 }
 
-void main() {
-  runApp(MyApp());
-}
+
 
 class MyApp extends StatelessWidget {
   @override
@@ -104,7 +105,7 @@ class ProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Products')),
+      appBar: AppBar(title: const Text('Products')),
       body: BlocBuilder<ProductBloc, ProductState>(
         builder: (context, state) {
           if (state is ProductLoading) {
@@ -180,7 +181,7 @@ class ProductScreen extends StatelessWidget {
           } else if (state is ProductError) {
             return Center(child: Text(state.error));
           }
-          return Center(child: Text('Press button to fetch products'));
+          return const Center(child: Text('Press button to fetch products'));
         },
       ),
     );
